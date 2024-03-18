@@ -53,12 +53,20 @@ function checkForAnime(){
     }
 }
 
-try{
-    if(originalDocument != null){
-        timeOut = setTimeout(checkForAnime, 200)
+chrome.runtime.onMessage.addListener(function(message, sender, sendResponse){
+    if(message.case === 'Active'){
+        console.log('You Activated the Extension...');
+        try{
+            if(originalDocument != null){
+                timeOut = setTimeout(checkForAnime, 200)
+            }else{
+                throw "There is no content!"
+            }
+        }catch(err) {
+            console.log("Error: ", err.message);
+        }
     }else{
-        throw "There is no content!"
+        console.log('You Deactivated the Extension...');
+        document.documentElement.innerHTML = originalDocument;
     }
-}catch(err) {
-    console.log("Error: ", err.message);
-}
+});

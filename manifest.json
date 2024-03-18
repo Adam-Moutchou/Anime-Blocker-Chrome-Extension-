@@ -2,10 +2,21 @@
   "manifest_version": 3,
   "name": "Anime Blocker",
   "description": "Block anime websites and Get rid of your anime addiction!",
-  "version": "1.0",
-  "action": {
-    "default_icon": "Images/icon_180.png"
+  "version": "1.1.0",
+  "icons": {
+    "16": "Images/icon_16.png",
+    "32": "Images/icon_32.png",
+    "180": "Images/icon_180.png"
   },
+  "action": {
+    "default_popup": "Popup/popup.html",
+    "default_icon": {
+      "16": "Images/icon_16.png",
+      "32": "Images/icon_32.png",
+      "180": "Images/icon_180.png"
+    }
+  },
+  "permissions": ["tabs"],
   "content_scripts": [
     {
       "js": ["content_scripts/content.js"],
@@ -13,5 +24,8 @@
         "<all_urls>"
       ]
     }
-  ]
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
 }

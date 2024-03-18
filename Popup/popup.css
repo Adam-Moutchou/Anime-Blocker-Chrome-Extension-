@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --ReadEx: "Readex Pro", sans-serif;
+}
+
+body{
+    width: 30em;
+    height: 25em;
+    background-color: #f3f3f3;
+}
+
+main .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+main .content .header{
+    text-align: center;
+    padding: 20px;
+    font-family: var(--ReadEx);
+}
+
+main .content .header em{
+    font-size: 15px;
+    line-height: 1.5rem;
+    display: block;
+    margin-top: 10px;
+    color: rgb(112, 112, 112);
+}
+
+main .content .Case button{
+    padding: 20px 40px 20px 40px;
+    font-size: 2em;
+    font-family: monospace;
+    color: #ebe9e9;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+    cursor: pointer;
+    width: 10em;
+    transition: all .1s;
+}
+
+main .content .Case button:active{
+    scale: 0.93;
+}
+
+.deactive{
+    background-color: rgb(248, 14, 14);
+}
+
+.active{
+    background-color: rgb(34, 243, 62);
+}
+
+/*main .content .Feedback{
+    position: fixed;
+    right:10px;
+    bottom:10px;
+}
+
+main .content .Feedback button{
+    padding: 5px 10px 5px 10px;
+    font-size: 15px;
+    font-family: monospace;
+    background-color: rgb(206, 206, 206);
+    color: #0f0f0f;
+    border: 1px solid #616161;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background .1s;
+}
+
+main .content .Feedback button:hover{
+    background-color: rgb(206, 206, 206,0.6);
+}
+
+main .content .Feedback button:active{
+    background-color: rgb(206, 206, 206);
+}*/
+
+main .content .social-links{
+    position: fixed;
+    left: 10px;
+    bottom: 5px;
+}
+
+main .content .social-links img{
+    width: 3em;
+}
